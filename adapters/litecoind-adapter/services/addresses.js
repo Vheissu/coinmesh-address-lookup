@@ -23,7 +23,6 @@ class AddressesService {
     return jsonRpcClient.post(request);
   }
 
-
   importAddress(address, label = 'Watched Addresses', reScan = false) {
     let request = {
       method: 'importaddress',
@@ -38,7 +37,7 @@ class AddressesService {
 
   async getReceivedByAddress(address, minConfirmations = 0) {
     await this.importAddress(address);
-    
+
     let request = {
       method: 'getreceivedbyaddress',
       params: [
