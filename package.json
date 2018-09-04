@@ -1,0 +1,19 @@
+{
+  "name": "coinmesh-address-lookup",
+  "description": "An application built using Coinmesh to look up cryptocurrency wallet addresses and get the balance.",
+  "coinmesh": {
+    "type": "project",
+    "adapters": {
+      "litecoind-adapter": "C:\\Users\\Dwayne Charrington/Desktop/coinmesh-address-lookup/adapters/litecoind-adapter"
+    },
+    "logicServices": {
+      "http-service": "C:\\Users\\Dwayne Charrington/Desktop/coinmesh-address-lookup/logic-services/http-service"
+    },
+    "dataSources": {
+      "litecoind": "C:\\Users\\Dwayne Charrington/Desktop/coinmesh-address-lookup/data-sources/litecoind"
+    },
+    "clientApplications": {
+      "client": "C:\\Users\\Dwayne Charrington/Desktop/coinmesh-address-lookup/client-applications/client"
+    }
+  }
+}
