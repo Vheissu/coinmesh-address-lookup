@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const exchangeRates = require('./routes/exchange-rates');
+const walletInfo = require('./routes/wallet-info');
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/v0/exchange-rates', exchangeRates);
+app.use('/v1/wallet-info', walletInfo);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

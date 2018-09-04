@@ -8,16 +8,19 @@
     "adapters": {
       "litecoind-adapter": "adapters/litecoind-adapter"
     },
-    "network": "regtest",
+    "network": "testnet",
     "runHttp": true,
     "conf": {
-      "regtest": "1",
-      "server": "1",
-      "rpcuser": "rpcuser",
-      "rpcpassword": "rpcpassword",
-      "txindex": "1",
-      "zmqpubrawblock": "tcp://127.0.0.1:28332",
-      "zmqpubrawtx": "tcp://127.0.0.1:28332"
+      "litecoin": {
+        "regtest": "1",
+        "server": "1",
+        "rpcuser": "rpcuser",
+        "rpcpassword": "rpcpassword",
+        "txindex": "1",
+        "daemon": "1",
+        "zmqpubrawblock": "tcp://127.0.0.1:28332",
+        "zmqpubrawtx": "tcp://127.0.0.1:28332"
+      }
     }
   },
   "main": "index.js",

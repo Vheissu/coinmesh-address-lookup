@@ -1,5 +1,11 @@
-import {Person} from 'models/person';
-
 export class Index {
-  person = new Person();
+  activeTab = '';
+
+  setActiveTab(tabName) {
+    if (this.activeTab === tabName) {
+      this.activeTab = '';
+    } else {
+      this.activeTab = tabName;
+    }
+  }
 }

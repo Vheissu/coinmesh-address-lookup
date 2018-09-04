@@ -1,1 +1,0 @@
-{"version":3,"sources":["models/network-info.js"],"names":["NetworkInfo","data","Object","assign"],"mappings":";;;;;;;;;;;;;;6BAAaA,W,GAGX,qBAAYC,IAAZ,EAAkB;AAAA;;AAChBC,eAAOC,MAAP,CAAc,IAAd,EAAoBF,IAApB;AACD,O","file":"network-info.js","sourceRoot":"/src"}
