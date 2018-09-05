@@ -1,9 +1,9 @@
 import { customElement } from 'aurelia-framework';
-import { WalletHttpWrapper } from '../services/wallet-http-wrapper';
+import { HttpWrapper } from '../services/http-wrapper';
 
 @customElement('lookup')
 export class Lookup {
-    static inject = [WalletHttpWrapper];
+    static inject = [HttpWrapper];
     wallet;
 
     address = '';
@@ -11,13 +11,22 @@ export class Lookup {
 
     constructor(wallet) {
         this.wallet = wallet;
+
+        this.wallet.post('addresses/listaddresses').then(res => {
+            console.log(res);
+        }); 
     }
 
-    async doLookup() {
-        this.result = await this.wallet.post('getreceivedbyaddress', {
+    doLookup() {
+        this.wallet.post('addresses/getreceivedbyaddress', {
             address: this.address
-        });
-
-        this.address = '';
+        })
+        .then(res => {
+            this.result = JSON.parse(res.response);
+            this.address = '';
+        })
+        .catch(e => {
+            console.error(e);
+        })
     }
 }
