@@ -7,12 +7,17 @@ export class Lookup {
     wallet;
 
     address = '';
+    result;
 
     constructor(wallet) {
         this.wallet = wallet;
     }
 
-    doLookup() {
+    async doLookup() {
+        this.result = await this.wallet.post('getreceivedbyaddress', {
+            address: this.address
+        });
 
+        this.address = '';
     }
 }

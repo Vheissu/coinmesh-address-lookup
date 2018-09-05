@@ -2,5 +2,7 @@
     <div>
         <input type="text" placeholder="Enter a Litecoin address to get its balance" value.bind="address">
         <button type="button" click.delegate="doLookup()">Look</button>
+
+        <div show.bind="result">${result}</div>
     </div>
 </template>
